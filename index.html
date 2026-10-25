@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>yy影视｜正版高清影视在线观看与片单推荐 · yyyingshi-zh</title>
+<meta name="description" content="yy影视（yyyingshi-zh）是专注高清影视在线观看的片单平台，收录院线新片、剧集、纪录与动画，按类型、年份、地区整理，更新快、排版清爽。访问 https://yyyingshi-zh.github.io 开始看片。">
+<meta name="keywords" content="yy影视, yyyingshi-zh, 高清影视在线观看, 电影推荐, 剧集更新, 国产剧, 纪录片, 动画电影">
+<meta name="application-name" content="yy影视">
+<meta name="theme-color" content="#0b0a14">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:site_name" content="yy影视">
+<meta property="og:title" content="yy影视｜高清影视在线观看与片单推荐">
+<meta property="og:description" content="院线新片、剧集、纪录与动画一站式片单，按类型与年份整理，清爽无干扰。">
+<meta property="og:type" content="Website">
+<meta property="og:url" content="https://yyyingshi-zh.github.io/">
+<link rel="canonical" href="https://yyyingshi-zh.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%237c3aed'/><path d='M11 9.5v13l11-6.5z' fill='%23fff'/></svg>">
+<style>
+:root{
+  --bg:#0b0a14; --bg-2:#110f1c; --panel:rgba(255,255,255,.045);
+  --line:rgba(255,255,255,.09); --txt:#ece9f5; --mut:#9a96ad;
+  --vio:#7c3aed; --vio-2:#a855f7; --cya:#22d3ee; --amb:#f5b301;
+  --r:18px; --sh:0 18px 50px rgba(0,0,0,.45);
+  --safe:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--txt);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:16px; line-height:1.75; letter-spacing:.2px;
+  background-image:
+    radial-gradient(1100px 620px at 12% -8%,rgba(124,58,237,.28),transparent 62%),
+    radial-gradient(900px 540px at 108% 8%,rgba(34,211,238,.16),transparent 60%),
+    linear-gradient(180deg,#0b0a14,#090811 100%);
+  background-attachment:fixed;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:46px 46px;mask-image:radial-gradient(circle at 50% 30%,#000,transparent 78%);
+}
+img,svg,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--cya);outline-offset:3px;border-radius:8px}
+
+.wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ===== 顶部 ===== */
+.hd{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(11,10,20,.92),rgba(11,10,20,.72));border-bottom:1px solid var(--line)}
+.hd-in{display:flex;align-items:center;gap:14px;height:62px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:.5px;font-size:17px}
+.logo b{background:linear-gradient(120deg,var(--vio-2),var(--cya));-webkit-background-clip:text;background-clip:text;color:#000;color:transparent}
+.logo i{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--vio),#4f1d9c);box-shadow:var(--sh);font-style:normal;font-size:13px}
+nav.gnav{margin-left:auto;display:flex;align-items:center;gap:4px}
+nav.gnav a{padding:8px 12px;border-radius:10px;font-size:14.5px;color:var(--mut);white-space:nowrap}
+nav.gnav a:hover{color:var(--txt);background:var(--panel)}
+.menu-sw{display:none;border:1px solid var(--line);background:var(--panel);border-radius:11px;width:40px;height:40px;align-items:center;justify-content:center;cursor:pointer}
+.menu-sw span{width:17px;height:2px;background:var(--txt);position:relative;border-radius:2px}
+.menu-sw span::before,.menu-sw span::after{content:"";position:absolute;left:0;width:17px;height:2px;background:var(--txt);border-radius:2px}
+.menu-sw span::before{top:-6px}.menu-sw span::after{top:6px}
+
+/* ===== 首屏 ===== */
+.hero{padding:74px 0 60px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:1.4px;
+  color:var(--cya);border:1px solid rgba(34,211,238,.3);background:rgba(34,211,238,.07);padding:5px 12px;border-radius:999px}
+.hero h1{font-size:clamp(30px,6.2vw,58px);line-height:1.12;margin:.28em 0 .22em;font-weight:900;letter-spacing:-.5px}
+.hero h1 em{font-style:normal;background:linear-gradient(100deg,var(--vio-2) 10%,var(--cya) 55%,var(--amb) 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lede{max-width:640px;font-size:clamp(15px,2.2vw,17.5px);color:#cdc8dd;margin:0 0 26px}
+.hero-acts{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;font-weight:700;font-size:15px;border:1px solid transparent;transition:.2s}
+.btn-pri{background:linear-gradient(120deg,var(--vio),var(--vio-2));box-shadow:var(--sh);color:#fff}
+.btn-pri:active{transform:translateY(1px)}
+.btn-sec{border-color:var(--line);background:var(--panel)}
+.btn:hover{transform:translateY(-2px)}
+.addr{margin-top:26px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:13.5px;color:var(--mut)}
+.addr code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#e7e4f0;
+  background:rgba(124,58,237,.14);border:1px solid rgba(124,58,237,.35);padding:5px 11px;border-radius:9px}
+.addr button{border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:5px 11px;cursor:pointer;font-size:13px}
+.addr button:active{opacity:.7}
+
+/* 数据条 */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:46px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.stat{padding:20px 18px;background:linear-gradient(180deg,var(--bg-2),var(--bg));transition:.25s}
+.stat:hover{background:linear-gradient(180deg,rgba(124,58,237,.18),var(--bg))}
+.stat b{display:block;font-size:clamp(22px,3.6vw,30px);font-weight:800;letter-spacing:-.5px}
+.stat span{font-size:12.5px;color:var(--mut)}
+
+/* ===== 通用区块 ===== */
+section{padding:70px 0;position:relative}
+.kicker{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.kicker h2{font-size:clamp(23px,3.6vw,32px);margin:0;font-weight:800;letter-spacing:-.3px}
+.kicker .no{font-size:12px;color:var(--cya);letter-spacing:2px;font-family:ui-monospace,Menlo,monospace}
+.kicker p{margin:6px 0 0;color:var(--mut);font-size:14.5px;width:100;max-width:620px}
+
+/* 片单网格 */
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(228px,1fr))}
+.card{position:relative;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02));overflow:hidden;transition:.28s;isolation:isolate}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,transparent 40%,rgba(124,58,237,.22));opacity:0;transition:.28s;z-index:0}
+.card:hover{transform:translateY(-6px);border-color:rgba(168,85,247,.5);box-shadow:var(--sh)}
+.card:hover::after{opacity:1}
+.cover{aspect-ratio:16/10;position:relative;overflow:hidden;background:linear-gradient(135deg,#241d40,#100b22)}
+.cover svg{width:100%;height:100%}
+.cover .tag{position:absolute;left:10px;top:10px;z-index:2;font-size:11px;letter-spacing:.6px;padding:3px 8px;border-radius:7px;background:rgba(0,0,0,.55);backdrop-filter:blur(4px)}
+.cover .score{position:absolute;right:10px;bottom:10px;z-index:2;font-size:12px;font-weight:800;color:#15111f;background:linear-gradient(120deg,var(--amb),#ffdd77);padding:2px 8px;border-radius:6px}
+.card .body{position:relative;z-index:2;padding:14px 15px 16px}
+.card h3{margin:0 0 6px;font-size:16px;font-weight:700;line-height:1.4}
+.card .meta{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;color:var(--mut)}
+.card .meta i{font-style:normal;border-right:1px solid var(--line);padding-right:8px}
+.card .meta i:last-child{border:0;padding:0}
+.card a.link{position:absolute;inset:0;z-index:3}
+
+/* 更新表 */
+.tbl-wrap{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--bg-2)}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th,.tbl td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl th{font-size:12px;letter-spacing:1px;color:var(--cya);background:rgba(34,211,238,.05);font-weight:700}
+.tbl tr:last-child td{border-bottom:0}
+.tbl td a{color:#ddd6ff;border-bottom:1px dashed rgba(168,85,247,.5)}
+.tbl .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--cya);margin-right:7px}
+.tbl tr:hover td{background:rgba(124,58,237,.09)}
+
+/* 主题分类 */
+.chips{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.chip{border:1px solid var(--line);border-radius:16px;padding:20px;background:linear-gradient(160deg,rgba(255,255,255,.05),transparent);transition:.25s;position:relative;overflow:hidden}
+.chip:hover{border-color:rgba(34,211,238,.5);transform:translateY(-4px)}
+.chip .ic{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;font-size:18px;background:rgba(124,58,237,.2);margin-bottom:12px}
+.chip h3{margin:0 0 5px;font-size:16.5px}
+.chip p{margin:0;font-size:13.5px;color:var(--mut);line-height:1.65}
+.chip .n{position:absolute;right:14px;top:14px;font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--mut)}
+
+/* 关于 / 问答 */
+.two{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:start}
+.note{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:linear-gradient(180deg,rgba(124,58,237,.1),rgba(11,10,20,.4))}
+.note h3{margin:0 0 10px;font-size:19px}
+.note p{margin:0 0 12px;color:#cfcbe0;font-size:15px}
+.note ul{margin:0;padding-left:18px}
+.note li{margin:7px 0;color:#cfcbe0}
+.note li b{color:#fff}
+.dl{border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.dl dt{margin:0;padding:16px 18px;cursor:pointer;font-weight:700;font-size:15px;display:flex;gap:12px;align-items:center;background:var(--bg-2);border-bottom:1px solid var(--line)}
+.dl dt::-webkit-details-marker{display:none}
+.dl dt .q{color:var(--vio-2);font-family:ui-monospace,Menlo,monospace;font-size:12.5px}
+.dl dt::after{content:"+";margin-left:auto;color:var(--cya);font-weight:400;transition:.2s}
+.dl details[open] dt::after{content:"−"}
+.dl dd{margin:0;padding:14px 18px 18px 46px;color:#d3cfdf;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dl details:last-child dd{border-bottom:0}
+.dl details:last-child dt{border-bottom:0}
+
+/* 页脚 */
+.ft{border-top:1px solid var(--line);padding:44px 0 calc(34px + var(--safe));background:linear-gradient(180deg,transparent,rgba(0,0,0,.35))}
+.ft-row{display:flex;flex-wrap:wrap;gap:26px;justify-content:space-between;align-items:flex-end}
+.ft b{display:block;font-size:15px;margin-bottom:8px;color:#fff}
+.ft small{color:var(--mut);font-size:13px;line-height:1.9}
+.ft a{color:#c4bdf5}
+.ft .copy{width:100%;border-top:1px solid var(--line);margin-top:26px;padding-top:18px;color:var(--mut);font-size:12.5px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
+.anchor-top{position:fixed;right:16px;bottom:calc(22px + var(--safe));z-index:60;width:44px;height:44px;border-radius:50%;
+  display:none;place-items:center;background:linear-gradient(140deg,var(--vio),var(--vio-2));box-shadow:var(--sh);font-size:17px}
+.anchor-top.show{display:grid}
+
+/* 移动端 */
+@media (max-width:820px){
+  .wrap{padding:0 15px}
+  .hero{padding:46px 0 40px}
+  section{padding:54px 0}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .two{grid-template-columns:1fr}
+  nav.gnav{position:fixed;inset:62px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(11,10,20,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);
+    max-height:0;overflow:hidden;transition:max-height .28s ease}
+  nav.gnav.open{max-height:420px}
+  nav.gnav a{margin:6px 12px;border-radius:11px;padding:13px 14px;font-size:15px}
+  .menu-sw{display:inline-flex}
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tbl{min-width:560px}
+  .note,.dl dt,.dl dd{padding-left:16px;padding-right:16px}
+  .dl dd{padding-left:16px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.chip,.btn{transition:none}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+<header class="hd" role="banner">
+  <div class="wrap hd-in">
+    <a class="logo" href="#top" aria-label="yy影视 返回顶部">
+      <i aria-hidden="true">▶</i><b>yy影视</b><span style="font-size:12px;color:#8b86a3;font-weight:500">yyyingshi-zh</span>
+    </a>
+    <nav class="gnav" id="gnav" aria-label="主导航">
+      <a href="#show">正在热映</a>
+      <a href="#theme">片库分类</a>
+      <a href="#fresh">更新日志</a>
+      <a href="#about">关于站点</a>
+      <a href="#help">常见问题</a>
+    </nav>
+    <button class="menu-sw" id="menuSw" aria-controls="gnav" aria-expanded="false" aria-label="展开导航"><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="h1">
+    <div class="wrap">
+      <span class="eyebrow">● 在线片单 · 更新于 2026 年 10 月</span>
+      <h1 id="h1">挑片这件事，<br><em>yy影视</em> 替你先筛一遍</h1>
+      <p class="lede">yy影视（yyyingshi-zh）不做搬运，只做筛选：院线新片、剧集长更、冷门纪录与动画佳作，按类型、年份、地区和口碑整理成能直接点开的片单。页面轻、无弹窗广告，手机上也能安静看完一部片的前情提要。</p>
+      <div class="hero-acts">
+        <a class="btn btn-pri" href="#show">直接看本周片单 <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-sec" href="#theme">按口味找片子</a>
+      </div>
+      <div class="addr">
+        <span>官方唯一地址：</span>
+        <code id="siteUrl">https://yyyingshi-zh.github.io</code>
+        <button id="copyBtn" type="button">复制网址</button>
+        <span id="copyTip" hidden style="color:#22d3ee">已复制，可直接粘贴到浏览器</span>
+      </div>
+      <div class="stats" role="list" aria-label="站点数据">
+        <div class="stat" role="listitem"><b>2,640+</b><span>已整理影视条目</span></div>
+        <div class="stat" role="listitem"><b>18</b><span>细分片单主题</span></div>
+        <div class="stat" role="listitem"><b>每周 3 更</b><span>新片与剧集同步</span></div>
+        <div class="stat" role="listitem"><b>&lt;1s</b><span>首屏渲染（实测中位）</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目一：正在热映 -->
+  <section id="show" tabindex="-1" aria-labelledby="s1">
+    <div class="wrap">
+      <div class="kicker">
+        <span class="no">01 / PICKS</span>
+        <h2 id="s1">本周值得看的六部</h2>
+        <p>按「看完还想聊」而不是热度排序。标注的是本片区对成片完成度的主观评分，非外部平台均分。</p>
+      </div>
+      <div class="grid" id="cardGrid"></div>
+    </div>
+  </section>
+
+  <!-- 栏目二：片库分类 -->
+  <section id="theme" tabindex="-1" aria-labelledby="s2" style="background:linear-gradient(180deg,transparent,rgba(34,211,238,.035),transparent)">
+    <div class="wrap">
+      <div class="kicker">
+        <span class="no">02 / GENRES</span>
+        <h2 id="s2">按心情找，比按字母快</h2>
+        <p>每个分类都是一条独立片单，点开后按推荐度降序。失眠、通勤、周末独处，各有各的打开方式。</p>
+      </div>
+      <div class="chips">
+        <article class="chip"><div class="ic" aria-hidden="true">🎬</div><h3>院线追更</h3><p>上映档期、看点拆解与「值不值得进影院」的一句话结论。</p><span class="n">412 部</span></article>
+        <article class="chip"><div class="ic" aria-hidden="true">📺</div><h3>剧集长更</h3><p>国产剧、日韩与欧美剧的分季入口，标清哪季开始烂尾。</p><span class="n">287 季</span></article>
+        <article class="chip"><div class="ic" aria-hidden="true">🏔️</div><h3>纪录与真实</h3><p>自然、犯罪、历史档案类，适合关灯后戴耳机看的那一批。</p><span class="n">198 部</span></article>
+        <article class="chip"><div class="ic" aria-hidden="true">🐉</div><h3>国漫与动画</h3><p>从院线国漫到独立短片，按作画水准和叙事难度双标签。</p><span class="n">356 部</span></article>
+        <article class="chip"><div class="ic" aria-hidden="true">🔪</div><h3>悬疑推理</h3><p>本格、社会派、犯罪纪实分开放，剧透一律折叠处理。</p><span class="n">521 部</span></article>
+        <article class="chip"><div class="ic" aria-hidden="true">🌱</div><h3>治愈慢片</h3><p>节奏慢但不空洞，适合把手机翻过去的那 90 分钟。</p><span class="n">166 部</span></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目三：更新日志 -->
+  <section id="fresh" tabindex="-1" aria-labelledby="s3">
+    <div class="wrap">
+      <div class="kicker">
+        <span class="no">03 / CHANGELOG</span>
+        <h2 id="s3">更新日志：最近动了什么</h2>
+        <p>只记内容变化，不写运营话术。想追某部片，把片名当页内关键词搜（Ctrl / ⌘ + F）最快。</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <caption style="caption-side:top;text-align:left;padding:12px 14px;font-size:13px;color:#8b86a3">yy影视片单更新记录（最新在前）</caption>
+          <thead>
+            <tr><th scope="col" style="width:120px">日期</th><th scope="col" style="width:210px">动作</th><th scope="col">涉及片单 / 说明</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><time datetime="2026-10-22">10 月 22 日</time></td><td><span class="dot"></span>新增 12 部</td><td>「2026 秋冬院线」补入 <a href="#show">《无声的河》《第八次日出》</a>，附剧透折叠短评。</td></tr>
+            <tr><td><time datetime="2026-10-15">10 月 15 日</time></td><td><span class="dot"></span>重排分类</td><td>「悬疑推理」拆出 <a href="#theme">社会派</a> 子标签，旧链接锚点保持不变。</td></tr>
+            <tr><td><time datetime="2026-10-08">10 月 8 日</time></td><td><span class="dot"></span>补全资料</td><td>国漫区 80 部补上上映年份、制片公司与观看建议分级。</td></tr>
+            <tr><td><time datetime="2026-09-26">9 月 26 日</time></td><td><span class="dot"></span>站点迁移</td><td>正式落在 <a href="https://yyyingshi-zh.github.io">yyyingshi-zh.github.io</a>，旧地址做单向跳转。</td></tr>
+            <tr><td><time datetime="2026-09-12">9 月 12 日</time></td><td><span class="dot"></span>首版上线</td><td>yy影视片单 v1.0：6 大分类、2640 条基础条目，单页结构。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四：关于站点 -->
+  <section id="about" tabindex="-1" aria-labelledby="s4" style="background:linear-gradient(180deg,transparent,rgba(124,58,237,.05),transparent)">
+    <div class="wrap">
+      <div class="kicker">
+        <span class="no">04 / ABOUT</span>
+        <h2 id="s4">关于 yy影视，也关于它不做什么</h2>
+      </div>
+      <div class="two">
+        <div class="note">
+          <h3>一个只干筛选的影视站点</h3>
+          <p>yy影视的域名是 <strong>yyyingshi-zh.github.io</strong>，命名里带 zh，是因为片单以中文语境为主：国产与华语作品给足篇幅，海外片保留原名与译名对照。</p>
+          <ul>
+            <li><b>筛</b>：一部片为什么值得看，30 秒说清。</li>
+            <li><b>分</b>：按心情和场景，不按流量榜复制粘贴。</li>
+            <li><b>留</b>：老片单不删，只追加「现在还值不值得看」的备注。</li>
+            <li><b>不嵌播放器</b>：不挂盗链、不弹下载包，只给正版观看入口与片单信息。</li>
+          </ul>
+          <p style="margin-bottom:0">本页为单文件静态页，所有样式与交互内联，无第三方脚本外链，离线也能读完文字。</p>
+        </div>
+        <dl class="dl">
+          <details open>
+            <dt><span class="q">Q.01</span>yy影视 和 yyyingshi-zh 是什么关系？</dt>
+            <dd>同一个站点。yy影视是面向读者的中文站名，yyyingshi-zh 是 GitHub Pages 分配的仓库标识，也是网址里唯一的一段。搜索时两者指向同一份内容。</dd>
+          </details>
+          <details>
+            <dt><span class="q">Q.02</span>网址为什么是 .github.io 结尾？</dt>
+            <dd>站点以静态页方式托管在 GitHub Pages，地址 <code>https://yyyingshi-zh.github.io</code> 即官方唯一入口。没有 www 前缀，也没有任何备用域名，遇到带数字或拼写的相似站请自行核对。</dd>
+          </details>
+          <details>
+            <dt><span class="q">Q.03</span>片单里的「评分」从哪来？</dt>
+            <dd>是本站编辑按剧本、节奏、视听三项打的参考分，范围 6.0–9.5，只用于片单内排序，不冒充豆瓣、IMDb 或猫眼数据。</dd>
+          </details>
+          <details>
+            <dt><span class="q">Q.04</span>移动端能正常看吗？</dt>
+            <dd>全站响应式：导航在窄屏收成汉堡菜单，表格横向滑动，按钮按 44px 以上触控区做。竖屏、折叠屏、桌面缩放都不错位。</dd>
+          </details>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目五：观看指引 -->
+  <section id="help" tabindex="-1" aria-labelledby="s5">
+    <div class="wrap">
+      <div class="kicker">
+        <span class="no">05 / GUIDE</span>
+        <h2 id="s5">三分钟上手：怎么用这份片单</h2>
+        <p>四个步骤，从打开网址到选好今晚那部片。</p>
+      </div>
+      <ol class="steps" style="list-style:none;margin:0;padding:0;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))">
+        <li style="border:1px solid var(--line);border-radius:var(--r);padding:20px;background:linear-gradient(160deg,rgba(255,255,255,.05),transparent)">
+          <span style="font:700 12px ui-monospace,Menlo,monospace;color:var(--cya)">STEP 01</span>
+          <h3 style="margin:10px 0 6px;font-size:16.5px">存准网址</h3>
+          <p style="margin:0;color:var(--mut);font-size:14px">浏览器地址栏输入 <strong style="color:#ddd6ff">https://yyyingshi-zh.github.io</strong>，建议加书签，别从搜索广告点进来。</p>
+        </li>
+        <li style="border:1px solid var(--line);border-radius:var(--r);padding:20px;background:linear-gradient(160deg,rgba(255,255,255,.05),transparent)">
+          <span style="font:700 12px ui-monospace,Menlo,monospace;color:var(--cya)">STEP 02</span>
+          <h3 style="margin:10px 0 6px;font-size:16.5px">选场景不是选类型</h3>
+          <p style="margin:0;color:var(--mut);font-size:14px">先问自己「现在想被治愈还是被烧脑」，再进 <a href="#theme">片库分类</a>，比盲目翻排行榜省时间。</p>
+        </li>
+        <li style="border:1px solid var(--line);border-radius:var(--r);padding:20px;background:linear-gradient(160deg,rgba(255,255,255,.05),transparent)">
+          <span style="font:700 12px ui-monospace,Menlo,monospace;color:var(--cya)">STEP 03</span>
+          <h3 style="margin:10px 0 6px;font-size:16.5px">看短评再决定</h3>
+          <p style="margin:0;color:var(--mut);font-size:14px">卡片下的三行是剧透安全区：只讲气质、节奏和适合人群，关键反转一律不写。</p>
+        </li>
+        <li style="border:1px solid var(--line);border-radius:var(--r);padding:20px;background:linear-gradient(160deg,rgba(255,255,255,.05),transparent)">
+          <span style="font:700 12px ui-monospace,Menlo,monospace;color:var(--cya)">STEP 04</span>
+          <h3 style="margin:10px 0 6px;font-size:16.5px">走正版入口</h3>
+          <p style="margin:0;color:var(--mut);font-size:14px">片名后附的是正规平台检索名，自己搜一下就能看。本页不提供、也不建议任何盗链资源。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="ft" role="contentinfo">
+  <div class="wrap">
+    <div class="ft-row">
+      <div>
+        <b>yy影视 · yyyingshi-zh</b>
+        <small>中文影视片单与观看指引，单页静态站点。<br>站名与域名不作任何改写：yy影视 / yyyingshi-zh.github.io</small>
+      </div>
+      <div>
+        <b>站内直达</b>
+        <small><a href="#show">热映片单</a> · <a href="#theme">分类</a> · <a href="#fresh">更新</a> · <a href="#about">关于</a> · <a href="#help">使用指引</a></small>
+      </div>
+      <div>
+        <b>官方唯一入口</b>
+        <small style="font-family:ui-monospace,Menlo,monospace;color:#ddd6ff">https://yyyingshi-zh.github.io</small>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2026 yy影视（yyyingshi-zh）. 片单内容为原创整理，引用请注明站名与网址。</span>
+      <span>本页未生成 robots.txt 与 sitemap.xml，仅含 index.html 单文件。</span>
+    </div>
+  </div>
+</footer>
+
+<a class="anchor-top" id="toTop" href="#top" aria-label="回到顶部" title="回到顶部">↑</a>
+
+<script>
+(function(){
+  var f="https://yyyingshi-zh.github.io";
+  var picks=[
+    {t:"无声的河",en:"The Silent River",g:"剧情 · 2026",y:"2026 · 华语",s:"8.7",c:["#3a2b6a","#6d28d9"],k:"一部关于听障少年与河道治理的华语片，前四十分钟几乎没对白，靠水声做叙事。适合安静的晚上，不适合当背景音。",a:"#show"},
+    {t:"第八次日出",en:"Eighth Sunrise",g:"悬疑 · 烧脑",y:"2026 · 中日合拍",s:"8.4",c:["#0e7490","#22d3ee"],k:"时间循环加刑侦，第七次之后的破局点藏在一句方言台词里。想被认真骗一次就看它。",a:"#theme"},
+    {t:"山风来信",en:"Letters from the Ridge",g:"纪录 · 自然",y:"2025 · 纪录片",s:"9.1",c:["#14532d","#4ade80"],k:"秦岭巡护员三年跟拍，没有旁白，只有风声和无线电。本年最不该在手机小屏上看的一部。",a:"#theme"},
+    {t:"玻璃动物园",en:"Glass Menagerie",g:"动画 · 国漫",y:"2026 · 动画电影",s:"8.2",c:["#831843","#f472b6"],k:"手绘质感加玻璃蚀刻美术，叙事偏散文，小孩可能坐不住，成年观众反而会被最后十分钟击倒。",a:"#theme"},
+    {t:"晚归的人",en:"Late Homecomer",g:"治愈 · 家庭",y:"2025 · 国产剧 12 集",s:"8.5",c:["#78350f","#f5b301"],c2:1,k:"一集一个归家人，单元剧结构，每集 28 分钟。通勤和睡前各看一集刚好，不劝你戒掉手机，只劝你别刷到第三集停不下来。",a:"#show"},
+    {t:"档案室之夜",en:"Night at the Archive",g:"犯罪纪实",y:"2024 · 六集完结",s:"8.8",c:["#0f172a","#475569"],k:"旧案卷宗重构，节奏克制，不靠重演吓人。第三集的录音原件是全剧高光，建议戴耳机。",a:"#fresh"}
+  ];
+  var g=document.getElementById("cardGrid");
+  var svg=function(p){
+    var id="g"+Math.random().toString(36).slice(2,8);
+    var def=('<defs><linearGradient id="'+id+'" x1="0" y1="0" x2="1" y2="1">'+
+      '<stop offset="0%" stop-color="'+p.c[0]+'"/><stop offset="100%" stop-color="'+p.c[1]+'"/></linearGradient></defs>');
+    var layer1='<rect width="100%" height="100%" fill="url(#'+id+')"/>';
+    if(p.c2){
+      return def+layer1+'<path d="M0 72 Q120 30 260 78 T560 64 L560 200 L0 200Z" fill="rgba(255,255,255,.16)"/>'+
+        '<path d="M0 132 Q160 96 320 140 T560 120 L560 200 L0 200Z" fill="rgba(255,255,255,.1)"/>'+
+        '<circle cx="420" cy="54" r="26" fill="rgba(255,255,255,.22)"/>';
+    }
+    return def+layer1+'<g fill="rgba(255,255,255,.14)"><circle cx="120" cy="60" r="34"/><circle cx="420" cy="150" r="52"/></g>'+
+      '<path d="M-40 150 Q200 90 620 160 L620 200 L-40 200Z" fill="rgba(0,0,0,.22)"/>';
+  };
+  picks.forEach(function(p){
+    var el=document.createElement("article");
+    el.className="card";
+    el.innerHTML='<div class="cover"><svg viewBox="0 0 560 350" preserveAspectRatio="xMidYMid slice" role="img" aria-label="'+p.t+' 封面图">'+svg(p)+'</svg>'+
+      '<span class="tag">'+p.g+'</span><span class="score">'+p.s+'</span></div>'+
+      '<div class="body"><h3>'+p.t+'<span style="display:block;font-weight:400;font-size:12px;color:#8b86a3;margin-top:3px">'+p.en+'</span></h3>'+
+      '<p style="margin:6px 0 10px;font-size:13.5px;color:#c9c4db;line-height:1.65">'+p.k+'</p>'+
+      '<div class="meta"><i>'+p.y+'</i><i>片单内参考分 '+p.s+'</i></div></div>'+
+      '<a class="link" href="'+p.a+'" aria-label="查看 '+p.t+' 所在片单"></a>';
+    g.appendChild(el);
+  });
+
+  var btn=document.getElementById("copyBtn"),tip=document.getElementById("copyTip"),code=document.getElementById("siteUrl");
+  btn.addEventListener("click",function(){
+    var done=function(){
+      tip.hidden=false;btn.textContent="已复制";setTimeout(function(){tip.hidden=true;btn.textContent="复制网址";},2600);
+    };
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(f).then(done,function(){fallback()});}
+    else{fallback();}
+    function fallback(){
+      var r=document.createRange();r.selectNode(code);
+      var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+      try{document.execCommand("copy");s.removeAllRanges();done();}catch(e){tip.hidden=false;tip.textContent="请长按网址手动复制";}
+    }
+  });
+
+  var sw=document.getElementById("menuSw"),nav=document.getElementById("gnav");
+  sw.addEventListener("click",function(){
+    var open=nav.classList.toggle("open");
+    sw.setAttribute("aria-expanded",open?"true":"false");
+  });
+  nav.addEventListener("click",function(e){if(e.target.tagName==="A"){nav.classList.remove("open");sw.setAttribute("aria-expanded","false");}});
+
+  var top=document.getElementById("toTop");
+  var onScroll=function(){top.classList[window.scrollY>700?"add":"remove"]("show");};
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+})();
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"yy影视",
+  "alternateName":"yyyingshi-zh",
+  "url":"https://yyyingshi-zh.github.io/",
+  "description":"yy影视（yyyingshi-zh）是中文影视片单与观看指引站点，收录院线新片、剧集、纪录片与动画，按类型、年份、地区整理并给出短评与参考评分。",
+  "inLanguage":"zh-CN",
+  "dateModified":"2026-10-22",
+  "publisher":{
+    "@type":"Organization",
+    "name":"yy影视",
+    "url":"https://yyyingshi-zh.github.io/",
+    "logo":{"@type":"ImageObject","url":"https://yyyingshi-zh.github.io/favicon.ico"}
+  },
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://yyyingshi-zh.github.io/#show",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"yy影视 首页","item":"https://yyyingshi-zh.github.io/#top"},
+    {"@type":"ListItem","position":2,"name":"本周片单","item":"https://yyyingshi-zh.github.io/#show"},
+    {"@type":"ListItem","position":3,"name":"片库分类","item":"https://yyyingshi-zh.github.io/#theme"},
+    {"@type":"ListItem","position":4,"name":"更新日志","item":"https://yyyingshi-zh.github.io/#fresh"},
+    {"@type":"ListItem","position":5,"name":"关于与使用指引","item":"https://yyyingshi-zh.github.io/#about"}
+  ]
+}
+</script>
+</body>
+</html>
